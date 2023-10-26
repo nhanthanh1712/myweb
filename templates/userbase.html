@@ -11,6 +11,16 @@
         <a href="/userHome" class="navbar-brand">
             <img src="../static/image/Logo.png" alt="logo" style="height: 300px;">
         </a>
+        <form action="/search" method="POST">
+            <label for="status">Trạng thái:</label>
+            <select name="status" id="status">
+                <option value="1">Chưa thực hiện</option>
+                <option value="2">Đang thực hiện</option>
+                <option value="3">Hoàn thành</option>
+            </select>
+            <button type="submit">Tìm kiếm</button>
+        </form>
+        
     </div>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -22,8 +32,15 @@
                 <a href="/newTask" class="nav-link">New Task</a>
             </li>
             <li class="nav-item">
+                <a href="/newProject" class="nav-link">New Project</a>
+            </li>
+            <li class="nav-item">
                 <a href="/logOut" class="nav-link">Log Out</a>
             </li>
+            <li class="nav-item">
+    <a href="/searchResults" class="nav-link">Search</a>
+</li>
+
         </ul>
     </nav>
     {% with messages=get_flashed_messages()%}
@@ -38,7 +55,7 @@
     {% block content %}{%endblock%}
     <!-- footer -->
     <div class="jumbotron text-center" style="margin-bottom: 0;">
-        <p>Copyright &copy;2020 by khangvt</p>
+        <p>Copyright &copy;2020 by Nguyễn Đặng Thành Nhân</p>
     </div>
     
 </body>
